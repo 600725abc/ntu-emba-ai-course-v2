@@ -1,12 +1,21 @@
 .site-shell {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.28), transparent 34rem),
+    radial-gradient(circle at 84% 12%, rgba(129, 140, 248, 0.32), transparent 32rem),
+    radial-gradient(circle at 55% 46%, rgba(20, 184, 166, 0.12), transparent 30rem),
+    linear-gradient(145deg, #10264d 0%, #0d2244 46%, #111f46 100%);
   min-height: 100vh;
   overflow: clip;
   position: relative;
 }
 
 .noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+  background-size: 72px 72px;
   inset: 0;
+  opacity: 0.36;
   pointer-events: none;
   position: fixed;
   z-index: -3;
@@ -14,34 +23,34 @@
 
 .ambient {
   border-radius: 999px;
-  filter: blur(84px);
-  opacity: 0.42;
+  filter: blur(112px);
+  opacity: 0.6;
   pointer-events: none;
   position: fixed;
   z-index: -2;
 }
 
 .ambient-one {
-  background: #4f46e5;
-  height: 38vw;
-  left: -16vw;
+  background: #22d3ee;
+  height: 44vw;
+  left: -18vw;
   top: 20vh;
-  width: 38vw;
+  width: 44vw;
 }
 
 .ambient-two {
-  background: #7c3aed;
-  height: 32vw;
-  right: -14vw;
+  background: #8b5cf6;
+  height: 38vw;
+  right: -12vw;
   top: 8vh;
-  width: 32vw;
+  width: 38vw;
 }
 
 .top-nav {
   align-items: center;
   backdrop-filter: blur(18px);
-  background: rgba(3, 7, 18, 0.78);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 25, 55, 0.78);
+  border-bottom: 1px solid rgba(148, 213, 255, 0.14);
   display: flex;
   height: 76px;
   justify-content: space-between;
@@ -70,9 +79,9 @@
 
 .brand-mark {
   align-items: center;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #22d3ee, #6366f1 58%, #a78bfa);
   border-radius: 10px;
-  box-shadow: 0 18px 42px rgba(99, 102, 241, 0.28);
+  box-shadow: 0 18px 42px rgba(34, 211, 238, 0.24);
   display: inline-flex;
   height: 42px;
   justify-content: center;
@@ -97,12 +106,26 @@
   text-align: center;
 }
 
+.hero-section::before {
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(56, 189, 248, 0.20), transparent 36rem),
+    radial-gradient(ellipse at 72% 44%, rgba(167, 139, 250, 0.22), transparent 34rem),
+    linear-gradient(180deg, rgba(30, 64, 175, 0.12), transparent 72%);
+  border: 1px solid rgba(148, 213, 255, 0.08);
+  border-radius: 0 0 40px 40px;
+  content: '';
+  inset: 76px max(-12vw, -96px) 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
 .hero-kicker {
   align-items: center;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(129, 140, 248, 0.24);
+  background: rgba(14, 165, 233, 0.16);
+  border: 1px solid rgba(125, 211, 252, 0.32);
   border-radius: 999px;
-  color: #a5b4fc;
+  color: #bae6fd;
   display: inline-flex;
   font-size: 13px;
   font-weight: 700;
@@ -114,15 +137,15 @@
 }
 
 .hero-kicker span {
-  background: #818cf8;
+  background: #67e8f9;
   border-radius: 999px;
-  box-shadow: 0 0 20px #818cf8;
+  box-shadow: 0 0 20px #67e8f9;
   height: 8px;
   width: 8px;
 }
 
 .hero-section h1 {
-  color: #fff;
+  color: #f8fbff;
   font-family: var(--serif);
   font-size: clamp(54px, 9vw, 108px);
   letter-spacing: 0;
@@ -131,8 +154,8 @@
 }
 
 .hero-subtitle {
-  border-bottom: 1px solid rgba(99, 102, 241, 0.42);
-  color: #e2e8f0;
+  border-bottom: 1px solid rgba(125, 211, 252, 0.44);
+  color: #eaf6ff;
   display: inline-block;
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 300;
@@ -142,7 +165,7 @@
 }
 
 .hero-zh {
-  color: #818cf8;
+  color: #bfdbfe;
   font-size: clamp(20px, 2vw, 26px);
   margin: 18px 0 0;
 }
@@ -157,10 +180,11 @@
 
 .stat {
   align-items: center;
-  background: rgba(15, 23, 42, 0.68);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(19, 49, 91, 0.58);
+  border: 1px solid rgba(148, 213, 255, 0.18);
   border-radius: 18px;
-  color: #94a3b8;
+  box-shadow: 0 18px 58px rgba(8, 47, 73, 0.20);
+  color: #bad2ea;
   display: grid;
   gap: 5px;
   justify-items: center;
@@ -169,18 +193,18 @@
 }
 
 .stat svg {
-  color: #818cf8;
+  color: #7dd3fc;
 }
 
 .stat strong {
   color: #fff;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 36px;
   line-height: 1;
 }
 
 .stat span {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -195,8 +219,8 @@
 
 .year-nav {
   backdrop-filter: blur(18px);
-  background: rgba(3, 7, 18, 0.78);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(9, 25, 55, 0.78);
+  border-bottom: 1px solid rgba(148, 213, 255, 0.12);
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -208,11 +232,11 @@
 }
 
 .year-nav a {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 213, 255, 0.16);
   border-radius: 999px;
-  color: #cbd5e1;
-  font-size: 14px;
+  color: #dbeafe;
+  font-size: 16px;
   font-weight: 800;
   min-width: 88px;
   padding: 10px 20px;
@@ -222,13 +246,13 @@
 
 .year-nav a:hover,
 .year-nav a:focus-visible {
-  background: #6366f1;
-  border-color: #818cf8;
+  background: #2563eb;
+  border-color: #7dd3fc;
   color: #fff;
 }
 
 .timeline-line {
-  background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.7), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(34, 211, 238, 0.72), rgba(129, 140, 248, 0.54), transparent);
   bottom: 0;
   left: 50%;
   opacity: 0.35;
@@ -253,8 +277,8 @@
 }
 
 .year-badge h2 {
-  background: rgba(15, 23, 42, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(22, 55, 100, 0.88);
+  border: 1px solid rgba(148, 213, 255, 0.20);
   border-radius: 999px;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
   color: #fff;
@@ -271,8 +295,8 @@
 }
 
 .year-copy p {
-  color: #818cf8;
-  font-size: 14px;
+  color: #7dd3fc;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.18em;
   margin: 0 0 8px;
@@ -280,8 +304,9 @@
 }
 
 .year-copy span {
-  color: #94a3b8;
+  color: #bfd3e7;
   display: block;
+  font-size: 18px;
   line-height: 1.65;
 }
 
@@ -309,12 +334,12 @@
 }
 
 .course-card {
-  background: linear-gradient(145deg, rgba(31, 41, 55, 0.66), rgba(15, 23, 42, 0.84));
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(145deg, rgba(30, 74, 124, 0.68), rgba(18, 42, 82, 0.86));
+  border: 1px solid rgba(148, 213, 255, 0.12);
   border-radius: 20px;
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
-  min-height: 178px;
-  padding: 24px;
+  min-height: 196px;
+  padding: 28px;
   position: relative;
   text-align: left;
   transition:
@@ -325,17 +350,17 @@
 }
 
 .course-card:hover {
-  border-color: rgba(129, 140, 248, 0.42);
-  box-shadow: 0 20px 58px rgba(99, 102, 241, 0.14);
+  border-color: rgba(125, 211, 252, 0.44);
+  box-shadow: 0 20px 58px rgba(34, 211, 238, 0.16);
   transform: translateY(-3px);
 }
 
 .course-card.featured {
-  border-color: rgba(129, 140, 248, 0.34);
+  border-color: rgba(125, 211, 252, 0.34);
 }
 
 .featured-label {
-  background: #6366f1;
+  background: #2563eb;
   border-radius: 6px;
   color: #fff;
   font-size: 10px;
@@ -349,10 +374,10 @@
 }
 
 .timeline-dot {
-  background: #030712;
-  border: 4px solid #6366f1;
+  background: #0b1833;
+  border: 4px solid #38bdf8;
   border-radius: 999px;
-  box-shadow: 0 0 18px rgba(99, 102, 241, 0.58);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.58);
   height: 18px;
   position: absolute;
   top: 50%;
@@ -362,8 +387,8 @@
 }
 
 .featured .timeline-dot {
-  background: #6366f1;
-  border-color: #a5b4fc;
+  background: #2563eb;
+  border-color: #7dd3fc;
 }
 
 .timeline-item.left .timeline-dot {
@@ -376,8 +401,8 @@
 
 .card-meta {
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  color: #818cf8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  color: #7dd3fc;
   display: flex;
   gap: 14px;
   margin-bottom: 16px;
@@ -386,7 +411,7 @@
 
 .icon-box {
   align-items: center;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.10);
   border-radius: 10px;
   display: inline-flex;
   height: 38px;
@@ -401,29 +426,29 @@
 
 .course-card h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 27px;
   letter-spacing: 0;
   line-height: 1.35;
   margin: 0 0 10px;
 }
 
 .course-card p {
-  color: #94a3b8;
-  font-size: 15px;
-  line-height: 1.6;
+  color: #d3e4f5;
+  font-size: 18px;
+  line-height: 1.72;
   margin: 0;
 }
 
 .facilitator {
-  background: rgba(15, 23, 42, 0.74);
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(12, 31, 62, 0.78);
+  border-top: 1px solid rgba(148, 213, 255, 0.12);
   padding: 78px 24px 34px;
 }
 
 .facilitator-card {
   align-items: center;
-  background: linear-gradient(145deg, rgba(31, 41, 55, 0.64), rgba(15, 23, 42, 0.82));
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(30, 74, 124, 0.62), rgba(18, 42, 82, 0.84));
+  border: 1px solid rgba(148, 213, 255, 0.14);
   border-radius: 24px;
   display: grid;
   gap: 34px;
@@ -452,7 +477,7 @@
 
 .facilitator-card p {
   color: #cbd5e1;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
   margin: 0 0 16px;
 }
@@ -555,15 +580,16 @@
 
   .course-card {
     min-height: 0;
-    padding: 22px;
+    padding: 24px;
   }
 
   .course-card h3 {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .course-card p {
-    font-size: 14px;
+    font-size: 16.5px;
+    line-height: 1.72;
   }
 
   .facilitator {
